@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/demo</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">DBPASSWORD</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="org.emobile.entity.Aircraft"/>
+        <mapping class="org.emobile.entity.Airport"/>
+        <mapping class="org.emobile.entity.BoardingPass"/>
+        <mapping class="org.emobile.entity.BoardingPassId"/>
+        <mapping class="org.emobile.entity.Booking"/>
+        <mapping class="org.emobile.entity.Flight"/>
+        <mapping class="org.emobile.entity.Seat"/>
+        <mapping class="org.emobile.entity.SeatId"/>
+        <mapping class="org.emobile.entity.Ticket"/>
+        <mapping class="org.emobile.entity.TicketFlight"/>
+        <mapping class="org.emobile.entity.TicketFlightId"/>
+    </session-factory>
+</hibernate-configuration>
